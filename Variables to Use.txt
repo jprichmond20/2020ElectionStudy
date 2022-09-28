@@ -1,0 +1,95 @@
+V202637 
+
+//V203401 - Age
+//V203402 - 
+Page 26 begins variables
+Pre-election
+Gender - V201004
+Attention to pol - V201005
+Registered to vote - V201008
+Method of voting - V201024
+Voted for who - V201029
+Preference strong or not - V201030
+Satisfied with life? - V201651
+Least federal spending? - V201645
+Guns owned - V201628
+Self censor - V201627
+More sensitive or too easily offended - V201626
+Concern about paying for healthcare - V201622
+Have health insurance - V201620
+Total family income - V201607 IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII
+Money invested in stocks - V201606
+Justified political violence - V201602
+Sex - V201600 _________________________________________________________________________
+Sexual orientation - V201601
+Worried about current finances - V201594
+Non-expired license - V201589
+Where you grew up - V201575
+Spouse race - V201565x
+Ethnic group - V201550
+Self-identified race - V201549x
+Worry about losing job - V201540
+//////////////////Non-working status - V201537 THIS ONE DID NOT WORK
+Main occupation - V201531
+What industry? - V201530y
+Diploma or GED? - V201515
+Level of education - V201511x
+Marital status - V201508
+Age???(Not sure) - V201507x
+Religious identification - V201462
+Church attendance - V201453
+Present relgion - V201435
+Is religion important? - V201433
+Violent/peaceful protests - V201432x
+Border wall? - V201426x
+Policy towards unauthorized immigrants - V201417
+Gay marriage - V201416
+Transgender policy - V201411x
+Too strict COVID restrictions? - V201393
+Prefer compromises or not budging - V201379
+Trust in news media - V201377
+Free to criticize in media - V201366
+Photo ID to vote - V201364
+^ID to vote - V201359x
+Worried about national economy - V201335
+Party better handling COVID - V201244
+^Taxes - V201242
+^Immigration - V201241
+^Healthcare - V201240
+^Economy - V201239
+Can people be trusted - V201237
+Party ID - V201231x
+Party ID importance - V201232
+Will presidential race be close in state - V201220
+Does R care who wins - V201216
+Feeling thermometer D - V201156
+^R - V201157
+Irritated about state of country - V201122
+^Nervous - V201123
+^Proud - V201121
+On right track? - V201114
+How likely to vote - V201100
+Vote in 2016 - V201103
+Candidate preference - V201036
+Party registration - V201018
+
+PAGE 216 GOING BACKWARDS
+
+"V201004", "V201005", "V201008", 
+                    "V201024", "V201029", "V201030", "V201651", 
+                    "V201645", "V201628", "V201627", "V201626", 
+                    "V201622", "V201620", "V201607", "V201606", 
+                    "V201602", "V201600", "V201601", "V201594", 
+                    "V201589", "V201575", "V201565x", "V201550", 
+                    "V201549x", "V201540", "V201531", 
+                    "V201530y", "V201515", "V201511x", "V201508", 
+                    "V201507x", "V201462", "V201453", "V201435", 
+                    "V201433", "V201432x", "V201426x", "V201417", 
+                    "V201416", "V201411x", "V201393", "V201379", 
+                    "V201377", "V201366", "V201364", "V201359x", 
+                    "V201335", "V201244", "V201242", "V201241", 
+                    "V201240", "V201239", "V201237", "V201231x", 
+                    "V201232", "V201220", "V201216", "V201156", 
+                    "V201157", "V201122", "V201123", "V201121", 
+                    "V201114", "V201100", "V201103", "V201036", 
+                   "V201018"
