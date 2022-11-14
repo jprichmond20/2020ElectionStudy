@@ -279,24 +279,24 @@ app.layout = html.Div(children=[    html.Div(children=[
 # In[ ]:
 
 
-@app.callback(Output("votes","figure"),Input("years","value"))
-def update_charts(years):
-    filtered_data = df[df["yearID"] == years]
-    barHR = px.bar(filtered_data,x="teamID",y="HR",title="Home Runs by Team",color_continuous_scale=px.colors.sequential.Plasma)
-    barHR.update_layout(xaxis_tickangle=20,title=dict(x=0.5),xaxis_tickfont=dict(size=8),yaxis_tickfont=dict(size=8),paper_bgcolor="LightSteelBlue",margin=dict(l=30,r=20,t=50,b=20))
-    return barHR
-@app.callback(Output("barHRLg","figure"),Input("years","value"))
-def update_charts(years):
-    filtered_data = df[df["yearID"] == years]
-    barHRLg = px.bar(filtered_data,x="lgID",y="HR",title="Home Runs by League",color_continuous_scale=px.colors.sequential.Plasma)
-    barHRLg.update_layout(xaxis_tickangle=20,title=dict(x=0.5),xaxis_tickfont=dict(size=8),yaxis_tickfont=dict(size=8),paper_bgcolor="LightSteelBlue",margin=dict(l=30,r=20,t=50,b=20))
-    return barHRLg
-@app.callback(Output("barSO","figure"),Input("years","value"))
-def update_charts(years):
-    filtered_data = df[df["yearID"] == years]
-    barSO = px.bar(filtered_data,x="teamID",y="SO",title="Strikeouts by Team",color_continuous_scale=px.colors.sequential.Plasma)
-    barSO.update_layout(xaxis_tickangle=20,title=dict(x=0.5),xaxis_tickfont=dict(size=8),yaxis_tickfont=dict(size=8),paper_bgcolor="LightSteelBlue",margin=dict(l=30,r=20,t=50,b=20))
-    return barSO
+# @app.callback(Output("Votes","figure"),Input("years","value"))
+# def update_charts(years):
+#     filtered_data = df[df["yearID"] == years]
+#     barHR = px.bar(filtered_data,x="teamID",y="HR",title="Home Runs by Team",color_continuous_scale=px.colors.sequential.Plasma)
+#     barHR.update_layout(xaxis_tickangle=20,title=dict(x=0.5),xaxis_tickfont=dict(size=8),yaxis_tickfont=dict(size=8),paper_bgcolor="LightSteelBlue",margin=dict(l=30,r=20,t=50,b=20))
+#     return barHR
+# @app.callback(Output("4Var","figure"),Input("years","value"))
+# def update_charts(years):
+#     filtered_data = df[df["yearID"] == years]
+#     barHRLg = px.bar(filtered_data,x="lgID",y="HR",title="Home Runs by League",color_continuous_scale=px.colors.sequential.Plasma)
+#     barHRLg.update_layout(xaxis_tickangle=20,title=dict(x=0.5),xaxis_tickfont=dict(size=8),yaxis_tickfont=dict(size=8),paper_bgcolor="LightSteelBlue",margin=dict(l=30,r=20,t=50,b=20))
+#     return barHRLg
+# @app.callback(Output("GunsVsMedia","figure"),Input("years","value"))
+# def update_charts(years):
+#     filtered_data = df[df["yearID"] == years]
+#     barSO = px.bar(filtered_data,x="teamID",y="SO",title="Strikeouts by Team",color_continuous_scale=px.colors.sequential.Plasma)
+#     barSO.update_layout(xaxis_tickangle=20,title=dict(x=0.5),xaxis_tickfont=dict(size=8),yaxis_tickfont=dict(size=8),paper_bgcolor="LightSteelBlue",margin=dict(l=30,r=20,t=50,b=20))
+#     return barSO
 
 
 # In[ ]:
