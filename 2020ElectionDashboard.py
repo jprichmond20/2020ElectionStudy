@@ -249,7 +249,7 @@ app.layout = html.Div(children=[    html.Div(children=[
 ]),
     html.Div(\
 
-    html.Div(children=[\
+    #html.Div(children=[\
         html.Div(\
             children = dcc.Graph(\
                     id = 'Votes',\
@@ -272,8 +272,9 @@ app.layout = html.Div(children=[    html.Div(children=[
                     figure = fig3,\
                     #config={"displayModeBar": False},
                 ),\
-                         style={'width': '100%', 'display': 'inline-block'},),\
-]))])
+                         style={'width': '100%', 'display': 'inline-block'}))\
+])
+#])
 
 
 # In[ ]:
