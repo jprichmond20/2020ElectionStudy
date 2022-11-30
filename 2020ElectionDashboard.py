@@ -5,6 +5,7 @@
 
 
 # Basics and Plotting
+import html as html
 import pandas as pd
 import numpy as np
 # import scipy as scp
@@ -15,8 +16,9 @@ from itertools import chain, combinations
 import plotly.express as px
 import plotly.graph_objects as go
 import dash
-from dash import dcc
-import dash_html_components as html
+#from dash import dcc
+from dash import Dash, html, dcc
+#import dash_html_components as html
 from dash.dependencies import Input, Output
 
 # Sklearn Models
@@ -178,7 +180,7 @@ df3.head()
 
 
 fig2 = px.scatter(df3, x=df3['PBetterImmigration'],               y=df3['VFor'], color=df3['FThermometerR'], size=df3['SatisfiedWLife'])
-fig2.show()
+#fig2.show()
 
 
 # In[28]:
@@ -218,19 +220,6 @@ server = app.server
 app.config.suppress_callback_exceptions = True
 
 
-# In[ ]:
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
 # children=[html.Div(children='yearID',\
 #                                 style={'fontSize':"20px"},\
 #                                 className='menu-title-bar'),\
@@ -245,35 +234,34 @@ app.config.suppress_callback_exceptions = True
 #              className='menu'),
 app.layout = html.Div(children=[    html.Div(children=[
         html.H1(children="2020 Election Survey", style={'textAlign':'center'},className="header-text"),
-        html.H2(children="JP Richmond and Alex Dufour",style={'fontSize':"30px",'textAlign':'center'},className="names-header"),\
-]),
-    html.Div(\
+        html.H2(children="JP Richmond",style={'fontSize':"30px",'textAlign':'center'},className="names-header"),
 
-    #html.Div(children=[\
-        html.Div(\
-            children = dcc.Graph(\
-                    id = 'Votes',\
-                    figure = fig1,\
+    html.Div(children=[
+        html.Div(
+            children = dcc.Graph(
+                    id = 'Votes',
+                    figure = fig1,
                   #  config={"displayModeBar": False},
-                ),\
-                style={'width': '50%', 'display': 'inline-block'},\
-            ),\
+                ),
+                style={'width': '50%', 'display': 'inline-block'},
+            ),
                 html.Div(\
-                children = dcc.Graph(\
-                    id = '4Var',\
-                    figure = fig2,\
+                children = dcc.Graph(
+                    id = '4Var',
+                    figure = fig2,
                     #config={"displayModeBar": False},
-                ),\
-                style={'width': '50%', 'display': 'inline-block'},\
-            ),\
-                html.Div(\
-                children = dcc.Graph(\
-                    id = 'GunsVsMedia',\
-                    figure = fig3,\
+                ),
+                style={'width': '50%', 'display': 'inline-block'},
+            ),
+                html.Div(
+                children = dcc.Graph(
+                    id = 'GunsVsMedia',
+                    figure = fig3,
                     #config={"displayModeBar": False},
-                ),\
-                         style={'width': '100%', 'display': 'inline-block'}))\
-])
+                ),
+                         style={'width': '100%', 'display': 'inline-block'})
+
+    ])])])
 #])
 
 
@@ -301,7 +289,8 @@ app.layout = html.Div(children=[    html.Div(children=[
 
 
 # In[ ]:
-
+if __name__ == '__main__':
+     app.run_server(host='0.0.0.0', port=8080, debug=True, use_reloader=False)
 
 
 
