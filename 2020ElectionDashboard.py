@@ -171,16 +171,20 @@ df3.head()
 
 
 indexNames = df3[ df3['SatisfiedWLife'] < 0 ].index
+
 # Delete these row indexes from dataFrame
 df3.drop(indexNames , inplace=True)
+indexNames2 = df3[ df3['PBetterImmigration'] < 0 ].index
+df3.drop(indexNames2 , inplace=True)
 df3.head()
 
 
 # In[27]:
 
 
-fig2 = px.scatter(df3, x=df3['PBetterImmigration'],               y=df3['VFor'], color=df3['FThermometerR'], size=df3['SatisfiedWLife'])
-#fig2.show()
+fig2 = px.scatter(df3, x=df3['PBetterImmigration'], \
+              y=df3['VFor'], color=df3['FThermometerR'], size=df3['SatisfiedWLife'], opacity=0.01)
+fig2.update_xaxes(type='category', categoryorder='category ascending')
 
 
 # In[28]:
