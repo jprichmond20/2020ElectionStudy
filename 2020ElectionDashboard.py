@@ -206,10 +206,20 @@ df3.head()
 
 # In[39]:
 
-
-fig3 = px.scatter(df3, x=df3['GunsOwned'],               y=df3['TrustMedia'],                   color=df3['VFor'],               labels={"x":"Candidate", "y":"# Of Voters"},               color_continuous_scale=px.colors.sequential.Hot,               title="Votes For Candidate")
-fig3.update_xaxes(type='category')
-fig3.update_layout(title=dict(x=0.5),                  margin=dict(l=20,r=20,t=60,b=20),                  paper_bgcolor="#D3D3D3")
+fig3 = px.scatter(df3, x=df3['GunsOwned'], \
+              y=df3['TrustMedia'], \
+                  color=df3['VFor'], \
+              labels={"x":"Candidate", "y":"# Of Voters"}, \
+              color_continuous_scale=px.colors.sequential.Hot, \
+              title="Votes For Candidate", opacity=0.15)
+fig3.update_xaxes(type='category', categoryorder='array', categoryarray=[-9,0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 20, 23, 24, 25, 29, 30, 36, 40, 44, 50, 60, 78, 99])#, axis={'categoryorder':'category ascending'})
+fig3.update_yaxes(type='category', categoryorder='category ascending')
+fig3.update_layout(title=dict(x=0.5),\
+                  margin=dict(l=20,r=20,t=60,b=20),\
+                  paper_bgcolor="#D3D3D3")
+# fig3 = px.scatter(df3, x=df3['GunsOwned'],               y=df3['TrustMedia'],                   color=df3['VFor'],               labels={"x":"Candidate", "y":"# Of Voters"},               color_continuous_scale=px.colors.sequential.Hot,               title="Votes For Candidate", opacity=0.15)
+# fig3.update_xaxes(type='category')
+# fig3.update_layout(title=dict(x=0.5),                  margin=dict(l=20,r=20,t=60,b=20),                  paper_bgcolor="#D3D3D3")
 
 
 
